@@ -90,10 +90,14 @@
 
   .scramble-area { flex: 1; display: flex; align-items: center; gap: 10px; min-width: 0; }
   .scramble-text {
-    font-family: 'DM Mono', monospace; font-size: 12px;
-    color: var(--accent2); letter-spacing: 0.5px;
-    flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  }
+  font-family: 'DM Mono', monospace; font-size: 12px;
+  color: var(--accent2); letter-spacing: 0.5px;
+  flex: 1; overflow-x: auto; white-space: nowrap;
+  cursor: grab; scrollbar-width: none;
+}
+.scramble-text::-webkit-scrollbar { display: none; }
+.scramble-text:active { cursor: grabbing; }
+
   .nav-btn {
     background: var(--surface2); border: 1px solid var(--border);
     color: var(--muted); padding: 7px 11px;
